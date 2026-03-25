@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 col-md-4">
+            <div class="card shadow-lg">
+
+                <!-- Card Header -->
+                <div class="card-header text-center bg-gradient-primary text-white">
+                    <h4 class="mb-0">Login</h4>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+                    <form action="/logincheck" method="POST">
+
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pwrd" class="form-label">Password</label>
+                            <input type="password" id="pwrd" name="pwrd" class="form-control" placeholder="Enter Password" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-gradient w-100">
+                            Login
+                        </button>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a href="/forgot_password" class="text-decoration-none">Forgot Password?</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

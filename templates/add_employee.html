@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-sm-12">
+
+            <div class="card shadow-lg">
+
+                <div class="card-header text-center bg-gradient-primary text-white">
+                    <h4 class="mb-0">Add Employee</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST">
+
+                        <div class="mb-3">
+                            <label for="eid" class="form-label">Employee ID</label>
+                            <input type="text" name="eid" id="eid" class="form-control" placeholder="Enter Employee ID" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ename" class="form-label">Employee Name</label>
+                            <input type="text" name="ename" id="ename" class="form-control" placeholder="Enter Employee Name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="edept" class="form-label">Department</label>
+                            <input type="text" name="edept" id="edept" class="form-control" placeholder="Enter Department">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="esalary" class="form-label">Salary</label>
+                            <input type="text" name="esalary" id="esalary" class="form-control" placeholder="Enter Salary">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ephone" class="form-label">Phone</label>
+                            <input type="text" name="ephone" id="ephone" class="form-control" placeholder="Enter Phone Number">
+                        </div>
+
+                        <button type="submit" class="btn btn-gradient w-100">
+                            Add Employee
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

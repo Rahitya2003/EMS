@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-6">
+            <div class="card shadow">
+
+                <!-- Card Header -->
+                <div class="card-header text-center bg-gradient-primary text-white">
+                    <h4 class="mb-0">Edit Employee</h4>
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+                    <form method="POST" action="/edit_employee">
+
+                        <input type="hidden" name="eid" value="{{ employee[0] }}">
+
+                        <div class="mb-3">
+                            <label for="ename" class="form-label">Employee Name</label>
+                            <input type="text" id="ename" name="ename" class="form-control" value="{{ employee[1] }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="edept" class="form-label">Department</label>
+                            <input type="text" id="edept" name="edept" class="form-control" value="{{ employee[2] }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="esalary" class="form-label">Salary</label>
+                            <input type="number" id="esalary" name="esalary" class="form-control" value="{{ employee[3] }}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="ephone" class="form-label">Phone</label>
+                            <input type="tel" id="ephone" name="ephone" class="form-control" value="{{ employee[4] }}" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-gradient w-100">
+                            Update Employee
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

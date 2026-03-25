@@ -1,0 +1,313 @@
+/* ===== BODY ===== */
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(120deg,#e0f7fa,#f1fff0,#fffde7); /* soft green-blue-yellow-white */
+}
+
+/* ===== NAVBAR ===== */
+.gradient-navbar{
+    background:linear-gradient(45deg,#00c6ff,#0072ff,#a8ff00); /* bright blue to green gradient */
+    padding:6px 0;
+}
+
+/* EMS LOGO TEXT */
+.navbar-brand{
+    font-size:28px;
+    font-weight:bold;
+    color:white !important;
+    letter-spacing:1px;
+}
+
+/* LOGO */
+.logo-img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+    box-shadow:0 0 8px rgba(255,255,255,0.6);
+}
+
+/* NAV LINKS */
+.navbar .nav-link{
+    color:white !important;
+    margin:6px 8px;
+    font-weight:500;
+    font-size:15px;
+}
+
+.navbar .nav-link:hover{
+    text-decoration:underline;
+    color:#ffeb3b !important; /* yellow hover */
+}
+
+/* CONTAINER */
+.container{
+    padding:20px;
+}
+
+@media (max-width:576px){
+    .container{
+        padding:10px;
+    }
+}
+
+/* FLASH */
+.flash{
+    padding:10px;
+    margin:10px;
+    border-radius:5px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.success{
+    background:linear-gradient(90deg,#a8ff00,#00c6ff);
+    color:#004d40;
+}
+
+.danger{
+    background:linear-gradient(90deg,#ffecb3,#ffe57f);
+    color:#b71c1c;
+}
+
+.info{
+    background:linear-gradient(90deg,#b2fefa,#0ed2f7);
+    color:#01579b;
+}
+
+/* DASHBOARD CARDS */
+.dashboard-card{
+    border-radius:15px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.dashboard-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 10px 25px rgba(0,198,255,0.4);
+}
+
+/* CARD COLORS */
+.bg-gradient-primary{
+    background:linear-gradient(45deg,#00c6ff,#a8ff00); /* blue-green */
+}
+
+.bg-gradient-success{
+    background:linear-gradient(45deg,#a8ff00,#00ffd5); /* green-cyan */
+}
+
+.bg-gradient-warning{
+    background:linear-gradient(45deg,#fff176,#a8ff00); /* yellow-green */
+}
+
+/* BUTTON */
+.btn-gradient{
+    background:linear-gradient(45deg,#00c6ff,#a8ff00);
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:6px 14px;
+}
+
+.btn-gradient:hover{
+    background:linear-gradient(45deg,#00ffd5,#e0ff7f);
+    color:white;
+}
+
+/* FORM */
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input{
+    border-radius:8px;
+    border:1px solid #ccc;
+    padding:8px;
+    transition:0.2s;
+}
+
+input:focus{
+    border-color:#00c6ff;
+    box-shadow:0px 0px 5px rgba(0,198,255,0.5);
+}
+
+/* SEARCH */
+.input-group input{
+    width:auto;
+    flex:1;
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border:1px solid #ccc;
+}
+
+table tbody tr:hover{
+    background:linear-gradient(90deg,#e0ffe0,#b2fff7);
+    transition:0.2s;
+}
+
+/* FOOTER */
+.gradient-footer{
+    background:linear-gradient(45deg,#00c6ff,#a8ff00,#fffde7);
+    color:white;
+}
+
+/* ICON */
+.icon-animate{
+    transition:transform 0.3s ease;
+}
+
+.icon-animate:hover{
+    transform:scale(1.3) rotate(5deg);
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .navbar{
+        text-align:center;
+    }
+
+    .navbar .nav-link{
+        display:block;
+        margin:5px 0;
+    }
+
+    .navbar-brand{
+        font-size:24px;
+    }
+}
+
+/* CONTACT CARD */
+.contact-card{
+    background: linear-gradient(135deg,#00c6ff,#a8ff00,#fffde7);
+    border-radius:20px;
+    color:white;
+}
+
+/* CONTACT ICON */
+.contact-icon{
+    font-size:50px;
+    color:white;
+}
+
+/* INPUT */
+.contact-input{
+    border-radius:10px;
+    border:none;
+    padding:10px;
+}
+
+.contact-input:focus{
+    box-shadow:0px 0px 8px rgba(0,198,255,0.7);
+    border:none;
+}
+
+/* CONTACT BUTTON */
+.btn-contact{
+    background:linear-gradient(45deg,#00c6ff,#a8ff00);
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-contact:hover{
+    background:linear-gradient(45deg,#00ffd5,#e0ff7f);
+    transform:scale(1.05);
+    box-shadow:0px 8px 20px rgba(0,0,0,0.3);
+}
+
+/* PROFILE CARD */
+.profile-card{
+    background:linear-gradient(135deg,#00c6ff,#a8ff00,#fffde7);
+    border-radius:20px;
+    color:white;
+}
+
+/* PROFILE AVATAR */
+.profile-avatar{
+    font-size:80px;
+}
+
+@media (max-width:576px){
+    .profile-avatar{
+        font-size:60px;
+    }
+    .profile-img-large{
+        width:90px;
+        height:90px;
+    }
+}
+
+/* EDIT PROFILE */
+.profile-edit-card{
+    border-radius:20px;
+}
+
+.profile-edit-card .card-header{
+    background:linear-gradient(45deg,#00c6ff,#a8ff00,#fffde7);
+}
+
+/* NAV PROFILE */
+.nav-profile-img{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid white;
+}
+
+@media (max-width:576px){
+    .nav-profile-img{
+        width:24px;
+        height:24px;
+    }
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:50%;
+    border:2px solid white;
+}
+
+.profile-img-large{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+}
+
+form{
+    width:100%;
+    padding:10px;
+}
+
+@media (max-width:576px){
+    input, select, textarea{
+        font-size:14px;
+        padding:6px;
+    }
+}
+
+@media (max-width:576px){
+    .btn{
+        width:100%;
+        margin-top:8px;
+    }
+}
