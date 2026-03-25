@@ -22,7 +22,7 @@ app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'rahithya88@gmail.com'
-app.config['MAIL_PASSWORD'] = 'lxuf tlxa fdcz evvk'
+app.config['MAIL_PASSWORD'] = 'lxuf tlxa fdcz evvk'  # Use app password
 
 mail = Mail(app)
 s = URLSafeTimedSerializer(app.secret_key)
@@ -39,7 +39,6 @@ def get_db():
 # -----------------------
 # Routes
 # -----------------------
-
 @app.route('/')
 def home_page():
     return render_template("register.html")
@@ -106,8 +105,8 @@ def register():
             return redirect("/login")
 
         cursor.execute(
-            "INSERT INTO users(id, username, password, role, email) VALUES(%s,%s,%s,%s,%s)",
-            (id, username, hashed_pw, role, email)
+            "INSERT INTO users(id, username, password, role, email, profile_pic) VALUES(%s,%s,%s,%s,%s,%s)",
+            (id, username, hashed_pw, role, email, "default.png")
         )
         conn.commit()
         flash("Registration successful! Please login.", "success")
@@ -377,6 +376,7 @@ def edit_profile():
 
             conn.commit()
             flash("Profile updated successfully", "success")
+            session['user'] = username
             return redirect('/profile')
 
         cursor.execute("SELECT * FROM users WHERE username=%s", (session['user'],))
